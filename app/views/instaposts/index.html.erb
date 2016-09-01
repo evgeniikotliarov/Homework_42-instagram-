@@ -1,2 +1,38 @@
-<h1>Instaposts#index</h1>
-<p>Find me in app/views/instaposts/index.html.erb</p>
+<div class="jumbotron">
+  <h1>Welcome to Instagram!</h1>
+  <p>Instagram — бесплатное приложение для обмена фотографиями  с элементами социальной сети, позволяющее снимать фотографии, а также распространять их через свой сервис.</p>
+</div>
+
+<div class="row">
+
+  <div class="col-sm-3">
+    <div class="panel panel-default" id="cart">
+      <div class="panel-heading">
+        <h3 class="panel-title">Фотографии</h3>
+      </div>
+      <div class="panel-body">
+          <% @instaposts.each do |blog| %>
+          <p><%= blog.user.name %></p>
+          <p><%= blog.content %></p>
+
+          <% end %>
+        
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+        <div class="col-sm-6 product-item">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <p>
+                <li><a href="http://localhost:3000/instaposts/new">Добавить Фото</a></li>
+              </p>
+              <p>
+                <li><a href="http://localhost:3000/instaposts/new">Добавить Коментарий</a></li>
+              </p>
+
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
