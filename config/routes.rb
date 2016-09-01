@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  get 'instaposts/new'
-
-  get 'instaposts/show'
-
-  get 'instaposts/index'
+  
+  root 'instaposts#index'
 
   devise_for :users
+
+  resources :instaposts
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
