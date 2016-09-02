@@ -18,7 +18,6 @@ class InstapostsController < ApplicationController
 	end
 	def show
 		@instapost = Instapost.find(params[:id])
-		@instaposts = Instapost.order(created_at: :desc)
 	end
 	def destroy
 		Instapost.destroy(params[:id])
@@ -26,7 +25,7 @@ class InstapostsController < ApplicationController
 	end
 	private
 	def instapost_params
-		params.require(:instapost).permit(:content, :user_id)
+		params.require(:instapost).permit(:content, :user_id, :image)
 	end
   
 end

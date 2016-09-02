@@ -14,6 +14,7 @@
           <% @instaposts.each do |blog| %>
           <p><%= blog.user.name %></p>
           <p><%= blog.content %></p>
+          <p><%= image_tag blog.image.url(:thumb)%></p>
 
           <% end %>
         
