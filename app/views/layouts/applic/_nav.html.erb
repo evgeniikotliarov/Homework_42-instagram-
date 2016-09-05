@@ -14,6 +14,11 @@
 
       <ul class="navbar-nav navbar-right">
         <% if user_signed_in? %>
+         <section>
+        <%= render 'shared/stats' %>
+      </section>
+
+      
          <p class="navbar-text">
           Инстаграм приветствует Вас, <%= link_to current_user.name, edit_user_registration_path(current_user),
           class:'navbar-link' %>

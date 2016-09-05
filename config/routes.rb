@@ -2,6 +2,27 @@ Rails.application.routes.draw do
   
   root 'instaposts#index'
 
+  post 'relationships/create'
+
+  delete 'relationships/destroy'
+
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
+  resources :users do
+  collection do
+    get :tigers
+  	end
+  end
+  
+
+  resources :sessions,      only: [:new, :create, :destroy]
+  resources :instaposts,    only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
+
   devise_for :users
 
   resources :instaposts
