@@ -3,7 +3,7 @@
   <aside class="span4">
     <section>
       <h1>
-        <%= image_for @user %>
+        <%= image_tag @user %>
         <%= @user.name %>
       </h1>
     </section>
@@ -14,4 +14,15 @@
   <div class="span8">
     <%= render 'follow_form' if signed_in? %>
   </div>
+  <div class="span8">
+    <% if @user.instaposts.any? %>
+      <h3>Instaposts (<%= @user.instaposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @instaposts %>
+      </ol>
+      <%= will_paginate @instaposts %>
+    <% end %>
+  </div>
+</div>
+
 </div>

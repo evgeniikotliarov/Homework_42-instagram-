@@ -8,7 +8,7 @@
   <div class="col-sm-3">
     <div class="panel panel-default" id="cart">
       <div class="panel-heading">
-        <h3 class="panel-title">Фотографии</h3>
+        <h3 class="panel-title">Лента</h3>
       </div>
       <div class="panel-body">
           <% @instaposts.each do |blog| %>
@@ -17,6 +17,14 @@
           <p><%= image_tag blog.image.url(:thumb)%></p>
 
           <% end %>
+
+          <% if signed_in? %>
+      <section>
+        <%= render 'shared/stats' %>
+      </section>
+      
+<% else %>
+<% end %>
         
       </div>
     </div>

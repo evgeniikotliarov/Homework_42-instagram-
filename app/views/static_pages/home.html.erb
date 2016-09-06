@@ -1,7 +1,5 @@
-% if signed_in? %>
-      .
-      .
-      .
+<% if signed_in? %>
+     
       <section>
         <%= render 'shared/user_info' %>
       </section>
@@ -9,13 +7,8 @@
         <%= render 'shared/stats' %>
       </section>
       <section>
-        <%= render 'shared/micropost_form' %>
+        <%= render 'shared/instapost_form' %>
       </section>
-      .
-      .
-      .
+      
 <% else %>
-  .
-  .
-  .
 <% end %>

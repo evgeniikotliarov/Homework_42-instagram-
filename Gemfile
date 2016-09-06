@@ -28,6 +28,13 @@ gem 'bootstrap-sass'
 gem 'devise'
 
 gem "paperclip", "~> 5.0.0"
+
+gem 'faker'
+
+gem 'simple_form'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'lorem', '~> 0.1.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
